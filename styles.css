@@ -67,7 +67,7 @@ img{max-width:100%; display:block}
 .hamburger span{display:block; height:2px; background:var(--smoke); transition:.25s}
 
 /* Hero */
-.hero{background:linear-gradient(180deg, rgba(164,22,26,.10), transparent), url('assets/hero-banner.jpg') center/cover no-repeat; color:#fff; position:relative; padding-bottom: 10px;}
+.hero{background:linear-gradient(180deg, rgb(164, 22, 27), transparent), url('assets/hero-banner.jpg') center/cover no-repeat; color:#fff; position:relative; padding-bottom: 10px; padding-top: 0px;}
 .hero::before{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,26,29,.55), rgba(22,26,29,.35))}
 .hero-inner{position:relative; z-index:1; text-align:center; padding-top: 20px;}
 .display{width: 100%;font-size:clamp(28px,4.2vw,48px); margin:0 0 var(--space-3); line-height:1.15; font-weight:700; position: absolute; top:-130px; left: 0%;}
