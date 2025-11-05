@@ -58,7 +58,7 @@ img{max-width:100%; display:block}
 
 .main-nav ul{list-style:none; display:flex; gap:28px; margin:0; padding:0}
 .main-nav a{color:var(--smoke); text-decoration:none; padding:10px 4px; position:relative}
-.main-nav a::after{content:""; position:absolute; left:0; right:0; bottom:2px; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:.25s}
+.main-nav a::after{content:""; position:absolute; left:0; right:0; bottom:2px; height:2px; background:red; transform:scaleX(0); transform-origin:left; transition:.5s}
 .main-nav a:hover::after{transform:scaleX(1)}
 
 /* Hamburger */
@@ -67,8 +67,8 @@ img{max-width:100%; display:block}
 .hamburger span{display:block; height:2px; background:var(--smoke); transition:.25s}
 
 /* Hero */
-.hero{background:linear-gradient(180deg, rgb(164, 22, 27), transparent), url('assets/hero-banner.jpg') center/cover no-repeat; color:#fff; position:relative; padding-bottom: 10px; padding-top: 0px;}
-.hero::before{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,26,29,.55), rgba(22,26,29,.35))}
+.hero{background:linear-gradient(to bottom, rgb(12, 46, 9), var(--bg)); color:#ffffff; position:relative; padding-bottom: 10px; padding-top: 0px;}
+.hero::before{content:""; position:absolute; inset:0; }
 .hero-inner{position:relative; z-index:1; text-align:center; padding-top: 20px;}
 .display{width: 100%;font-size:clamp(28px,4.2vw,48px); margin:0 0 var(--space-3); line-height:1.15; font-weight:700; position: absolute; top:-130px; left: 0%;}
 .lead{font-size:clamp(16px,1.6vw,20px); color:#e6edf3; max-width:900px; margin:0 auto var(--space-5)}
@@ -172,9 +172,9 @@ input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shado
 
 @media (max-width:768px){
   .hamburger{display:flex}
-  .main-nav{position:fixed; inset:68px 0 auto 0; background:var(--night); border-bottom:1px solid var(--line); transform:translateY(-120%); transition:.3s; z-index:90}
+  .main-nav{position:fixed; inset:68px 0 auto 0; background:var(--night); border-bottom:1px solid var(--line); transform:translateY(-140%); transition:.3s; z-index:90}
   .main-nav ul{flex-direction:column; gap:0}
-  .main-nav li{border-top:1px solid var(--line)}
+  .main-nav li{border-top:1px solid var(--line) }
   .main-nav a{display:block; padding:16px 24px}
   .nav-toggle:checked ~ .hamburger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .nav-toggle:checked ~ .hamburger span:nth-child(2){opacity:0}
