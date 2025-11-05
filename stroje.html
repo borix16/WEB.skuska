@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stroje a vozidlá – STAPEN</title>
+  <meta name="description" content="Galéria strojov a vozidiel STAPEN – rýpadlá, nakladače, sklápače, plošiny a ďalšia mechanizácia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .gallery-head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:24px}
+    .filters{display:flex; gap:10px; flex-wrap:wrap}
+    .tag{border:1px solid var(--line); padding:6px 10px; border-radius:999px; background:#fff; cursor:pointer}
+    .tag.active{background:var(--accent); color:#fff; border-color:var(--accent)}
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+    .gallery figure{margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow), var(--shadow-accent)}
+    .gallery img{width:100%; aspect-ratio:16/10; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; color:var(--muted)}
+    @media (max-width:1024px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:768px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-emph">STAPEN</span>
+        <span class="logo-sub">stavebníctvo • priemysel • energetika</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Menu">
+        <ul>
+          <li><a href="index.html#onas">O nás</a></li>
+          <li><a href="services.html">Naše služby</a></li>
+          <li><a aria-current="page" href="stroje.html">Stroje a vozidlá</a></li>
+          <li><a href="index.html#kontakt">Kontakty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="gallery-head">
+        <h1>Stroje a vozidlá</h1>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <figure data-tags="rypadlo"><img src="assets/imgs/auto3.jpg" alt="Wacker Neuson EW100" /><figcaption>Wacker Neuson EW100 (kolesové rýpadlo)</figcaption></figure>
+        <figure data-tags="rypadlo"><img src="assets/imgs/auto2.jpg" alt="Wacker Neuson ET42+" /><figcaption>Wacker Neuson ET42+ (pásové rýpadlo)</figcaption></figure>
+        <figure data-tags="nakladac"><img src="assets/imgs/auto5.jpg" alt="BOBCAT S530" /><figcaption>BOBCAT S530 (šmykom riadený nakladač)</figcaption></figure>
+        <figure data-tags="sklapac"><img src="assets/imgs/auto6.jpg" alt="Tatra 815 S3" /><figcaption>Tatra 815 S3 (sklápač)</figcaption></figure>
+        <figure data-tags="sklapac"><img src="assets/imgs/auto8.jpg" alt="MAN 7,5 t" /><figcaption>MAN 7,5 t (sklápač)</figcaption></figure>
+        <figure data-tags="valnik"><img src="assets/imgs/auto7.jpg" alt="AVIA valník s HR" /><figcaption>AVIA valník s hydraulickou rukou</figcaption></figure>
+        <figure data-tags="valnik"><img src="assets/imgs/auto4.jpg" alt="AVIA plošina MP16" /><figcaption>AVIA plošina MP16</figcaption></figure>
+        <figure data-tags="valnik"><img src="assets/imgs/auto9.jpg" alt="Valník do 3,5 t" /><figcaption>Valník do 3,5 t</figcaption></figure>
+        <figure data-tags="valnik"><img src="assets/imgs/auto1.jpg" alt="Manitou otočný" /><figcaption>Manitou – otočný, výsuv 24 m</figcaption></figure>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo small"><span class="logo-emph">STAPEN</span><span class="logo-sub">stavebníctvo • priemysel • energetika</span></div>
+      <nav>
+        <a href="index.html#onas">O nás</a>
+        <a href="services.html">Naše služby</a>
+        <a aria-current="page" href="stroje.html">Stroje a vozidlá</a>
+        <a href="index.html#projekty">Projekty</a>
+        <a href="index.html#kontakt">Kontakty</a>
+      </nav>
+      <div class="copyright">© <span id="year">2025</span> STAPEN</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
