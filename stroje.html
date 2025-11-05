@@ -15,9 +15,16 @@
     .tag{border:1px solid var(--line); padding:6px 10px; border-radius:999px; background:#fff; cursor:pointer}
     .tag.active{background:var(--accent); color:#fff; border-color:var(--accent)}
     .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .gallery figure{margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow), var(--shadow-accent)}
+    .gallery figure{margin:0; background:var(--cornell); border:2px solid var(--blood); border-radius:12px; overflow:hidden;
+      box-shadow:
+        0 8px 24px rgba(164,22,26,.22),
+        0 0 0 1px rgba(164,22,26,.25);
+      transition:box-shadow .2s ease}
+    .gallery figure:hover{box-shadow:
+        0 10px 30px rgba(229,56,59,.28),
+        0 0 0 1px rgba(229,56,59,.35)}
     .gallery img{width:100%; aspect-ratio:16/10; object-fit:cover}
-    .gallery figcaption{padding:10px 12px; color:var(--muted)}
+    .gallery figcaption{padding:10px 12px; color:#fff}
     @media (max-width:1024px){.gallery{grid-template-columns:repeat(3,1fr)}}
     @media (max-width:768px){.gallery{grid-template-columns:repeat(2,1fr)}}
   </style>
