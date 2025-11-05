@@ -70,7 +70,7 @@ img{max-width:100%; display:block}
 .hero{background:linear-gradient(to bottom, rgba(255, 0, 0, 0.226), var(--bg)); color:#ffffff; position:relative; padding-bottom: 10px; padding-top: 0px;}
 .hero::before{content:""; position:absolute; inset:0; }
 .hero-inner{position:relative; z-index:1; text-align:center; padding-top: 20px;}
-.display{width: 100%;font-size:clamp(28px,4.2vw,48px); margin:0 0 var(--space-3); line-height:1.15; font-weight:700; position: absolute; top:-130px; left: 0%;}
+.display{width: 100%;font-size:clamp(1rem, 3vw, 3rem); margin:0 0 var(--space-3); line-height:1.15; font-weight:700; position: absolute; top:-10vw;; left: 0%; color: #A4161A;}
 .lead{font-size:clamp(16px,1.6vw,20px); color:#e6edf3; max-width:900px; margin:0 auto var(--space-5)}
 .hero-cta{display:flex; gap:16px; justify-content:center}
 
@@ -89,6 +89,8 @@ h1 a, h2 a, h3 a, h4 a{color:inherit; text-decoration:none}
 
 /* Generic */
 .stack>*+*{margin-top:var(--space-3)}
+/* .stack p:nth-child(1){width: 90vw;} 
+.stack p:nth-child(2){width: 88vw;}  */
 .grid-2{display:grid; grid-template-columns:1.1fr .9fr; gap:var(--space-5); align-items:center}
 .gap-lg{gap:var(--space-6)}
 .card{background:var(--night); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow), var(--shadow-accent), 0 0 0 2px rgba(164,22,26,.30)}
@@ -155,8 +157,9 @@ input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shado
 .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
 .skip-link:focus{position:fixed; left:16px; top:12px; width:auto; height:auto; background:#000; color:#fff; padding:10px 14px; border-radius:8px; z-index:999}
 
+
 /* Animácie */
-.section, .card, .logo, .display, .lead{animation:fadeUp .6s ease both}
+.section, .card, .logo, .display, .lead{animation:fadeUp .9s ease both}
 @keyframes fadeUp{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
 
 /* Breakpoints */
@@ -187,4 +190,7 @@ input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shado
   .form-grid{grid-template-columns:1fr}
   .branches{grid-template-columns:1fr}
   .thumb-grid{grid-template-columns:repeat(2,1fr)}
+
+  .hero .display{font-size:clamp(0.5rem, 4vw, 2rem); top: -12vw;}
+  
 }
