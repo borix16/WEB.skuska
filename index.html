@@ -68,7 +68,7 @@
     <!-- Sekcia O nás (obsah z prezentácie) -->
     <!-- Zdroj: WEBKA STAPEN.pptx – snímka „O nás“ -->
     <section id="onas" class="section about">
-      <div class="container grid-2">
+      <div class="container">
         <article class="stack">
           <h2>O nás</h2>
           <p>Stapen je predovšetkým partia nadšených ľudí, denne žijúcich stavebníctvom a energetickým priemyslom.</p>
@@ -80,23 +80,19 @@
             <span class="badge">Stabilita</span>
           </div>
         </article>
-        <aside class="about-aside card media-cover" aria-label="Ilustračný obrázok hodnoty">
-          <img src="assets/imgs/Hodnoty.jpg" alt="Hodnoty spoločnosti – férovosť, profesionalita, stabilita" />
-        </aside>
-      </div>
-
-      <div class="container branches">
-        <div class="card">
-          <h3>Žilina</h3>
-          <p>Slovensko</p>
-        </div>
-        <div class="card">
-          <h3>Olomouc</h3>
-          <p>Česká republika</p>
-        </div>
-        <div class="card">
-          <h3>Liberec</h3>
-          <p>Česká republika</p>
+        <div class="branches">
+          <div class="card">
+            <h3>Žilina</h3>
+            <p>Slovensko</p>
+          </div>
+          <div class="card">
+            <h3>Olomouc</h3>
+            <p>Česká republika</p>
+          </div>
+          <div class="card">
+            <h3>Liberec</h3>
+            <p>Česká republika</p>
+          </div>
         </div>
       </div>
     </section>
@@ -219,7 +215,9 @@
       <div class="copyright">© <span id="year">2025</span> STAPEN. Všetky práva vyhradené.</div>
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/animations.js"></script>
   <script>
     // len aktualizácia roku bez ďalšieho JS
     document.getElementById('year').textContent = new Date().getFullYear();
