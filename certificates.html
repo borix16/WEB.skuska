@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifikáty a licencie – STAPEN</title>
+  <meta name="description" content="Certifikáty a licencie spoločnosti STAPEN." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-emph">STAPEN</span>
+        <span class="logo-sub">stavebníctvo • priemysel • energetika</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Menu">
+        <ul>
+          <li><a href="index.html#onas">O nás</a></li>
+          <li><a href="services.html">Naše služby</a></li>
+          <li><a aria-current="page" href="certificates.html">Certifikáty</a></li>
+          <li><a href="stroje.html">Stroje a vozidlá</a></li>
+          <li><a href="index.html#kontakt">Kontakty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Certifikáty a licencie</h1>
+      <div class="cert-slider" aria-label="Karusel certifikátov">
+        <div class="cert-viewport">
+          <div class="cert-track">
+            <figure class="cert cert-slide">
+              <a href="assets/imgs/certifikat-1.jpg" target="_blank" rel="noopener">
+                <img loading="lazy" src="assets/imgs/certifikat-1.jpg" alt="Certifikát 1" />
+              </a>
+            </figure>
+            <figure class="cert cert-slide">
+              <a href="assets/imgs/certifikat-2.jpg" target="_blank" rel="noopener">
+                <img loading="lazy" src="assets/imgs/certifikat-2.jpg" alt="Certifikát 2" />
+              </a>
+            </figure>
+            <figure class="cert cert-slide">
+              <a href="assets/imgs/certifikat-3.jpg" target="_blank" rel="noopener">
+                <img loading="lazy" src="assets/imgs/certifikat-3.jpg" alt="Certifikát 3" />
+              </a>
+            </figure>
+          </div>
+          <button class="cert-nav prev" aria-label="Predchádzajúci certifikát">&#10094;</button>
+          <button class="cert-nav next" aria-label="Ďalší certifikát">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo small"><span class="logo-emph">STAPEN</span><span class="logo-sub">stavebníctvo • priemysel • energetika</span></div>
+      <nav>
+        <a href="index.html#onas">O nás</a>
+        <a href="services.html">Naše služby</a>
+        <a aria-current="page" href="certificates.html">Certifikáty</a>
+        <a href="stroje.html">Stroje a vozidlá</a>
+        <a href="index.html#kontakt">Kontakty</a>
+      </nav>
+      <div class="copyright">© <span id="year">2025</span> STAPEN</div>
+    </div>
+  </footer>
+  <script src="assets/js/animations.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
