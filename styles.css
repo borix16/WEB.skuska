@@ -17,13 +17,13 @@
   --white:#FFFFFF;
 
   /* Mapped tokens */
-  --bg:#1F2427;
+  --bg:var(--night);
   --text:var(--smoke);
   --muted:var(--silver);
   --line:rgba(177,167,166,.28);
   --accent:var(--cornell); /* hlavná červená */
   --accent-2:var(--imperial); /* sekundárna červená */
-  --surface:#2A2F33;
+  --surface:var(--night);
   --radius:14px;
   --shadow:0 10px 30px rgba(0,0,0,.35);
   --shadow-accent:0 8px 24px rgba(164,22,26,.32);
@@ -40,17 +40,17 @@
 html,body{height:100%}
 html{scroll-behavior:smooth}
 body{
-  margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg);
+  margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--night);
 }
 img{max-width:100%; display:block}
 
 .container{width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px}
-.section{padding:clamp(0px,6vw,10px) 0}
-.section.alt{background:var(--surface)}
+.section{padding:clamp(28px,8vw,96px) 0}
+.section.alt{background:linear-gradient(to top, rgba(255, 0, 0, 0.226), var(--bg));}
 .section .section-head{display:flex; align-items:end; justify-content:space-between; gap:var(--space-4); margin-bottom:var(--space-5)}
 
 /* Header */
-.site-header{position:sticky; top:0; background:rgba(11,9,10,.9); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line); z-index:100}
+.site-header{position:sticky; top:0; background:var(--night); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line); z-index:100; margin-bottom:0}
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:68px}
 .logo{display:flex; flex-direction:column; text-decoration:none}
 .logo-emph{font-weight:800; letter-spacing:.5px; color:var(--accent); font-size:24px}
@@ -68,7 +68,7 @@ img{max-width:100%; display:block}
 
 /* Hero */
 .hero{background:linear-gradient(to bottom, rgba(255, 0, 0, 0.226), var(--bg)); color:#ffffff; position:relative; padding-bottom: 10px; padding-top: 0px;}
-.hero::before{content:""; position:absolute; inset:0; }
+.hero::before{content:""; position:absolute; inset:0;  backdrop-filter:blur(2px);}
 .hero-inner{position:relative; z-index:1; text-align:center; padding-top: 20px;padding-inline: 1vw;}
 
 .display{width: 100%;font-size:clamp(1rem, 3vw, 3rem); margin:0 0 var(--space-3); line-height:1.15; font-weight:700; position: absolute; top:clamp(-7rem, -1vw, -8rem); left: 0%; color: #A4161A;}
@@ -94,7 +94,7 @@ h1 a, h2 a, h3 a, h4 a{color:inherit; text-decoration:none}
 .stack p:nth-child(2){width: 88vw;}  
 .stack p:nth-child(3){width: 88vw;}  */
 .grid-2{display:grid; grid-template-columns:1.1fr .9fr; gap:var(--space-5); align-items:center}
-.gap-lg{gap:var(--space-6)}
+.gap-lg{gap:100px}
 .card{background:var(--night); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow), var(--shadow-accent), 0 0 0 2px rgba(164,22,26,.30)}
 .card:hover{box-shadow:var(--shadow), 0 10px 30px rgba(229,56,59,.34), 0 0 0 2px rgba(229,56,59,.34)}
 .card.media-cover{overflow:hidden}
@@ -157,8 +157,11 @@ input,textarea{width:100%; padding:12px 14px; border-radius:10px; border:1px sol
 input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shadow:0 0 0 3px rgba(229,56,59,.18)}
 .map img{height:100%; object-fit:cover}
 
+/* Nízke posunutie tlačidla Odoslať v sekcii Kontakt */
+#kontakt .contact-form .btn{margin-top:12px}
+
 /* Footer */
-.site-footer{border-top:1px solid var(--line); background:var(--night)}
+.site-footer{border-top:none; background:var(--night); margin-top:0}
 .footer-inner{display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:var(--space-4); padding-block:28px}
 .logo.small .logo-emph{font-size:18px}
 .logo.small .logo-sub{font-size:10px}
