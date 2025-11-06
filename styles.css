@@ -163,11 +163,7 @@ input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shado
 
 
 /* Animácie */
-<<<<<<< HEAD
 .section, .card, .logo, .display, .lead{animation:none}
-=======
-.section, .card, .logo, .display, .lead{animation:fadeUp .9s ease both}
->>>>>>> 755176496bc237bc2dbc18a5481481cfb70a0404
 @keyframes fadeUp{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
 
 .will-reveal{opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease}
