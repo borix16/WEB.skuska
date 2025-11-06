@@ -127,11 +127,17 @@ h1 a, h2 a, h3 a, h4 a{color:inherit; text-decoration:none}
 /* Certs & Projects */
 .cert-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-4)}
 .cert-viewport{position:relative; overflow:hidden; width:100%; max-width:600px; margin-inline:auto}
+.cert-track{display:flex; transition:transform .4s ease}
 .cert-slide{min-width:100%; margin:0; background:transparent; border:0; box-shadow:none; display:flex; align-items:center; justify-content:center; min-height:58vh}
 .cert img{display:block; width:auto; max-width:min(540px,100%); height:auto; max-height:58vh; margin-inline:auto; object-fit:contain; background:transparent; border-radius:8px; border:1px solid var(--line); padding:0; box-shadow:none}
 .cert img:hover{box-shadow:var(--shadow-accent), 0 0 0 2px rgba(229,56,59,.34)}
 .projects .project img{aspect-ratio:16/10; object-fit:cover; width:100%; border-radius:12px}
 .projects .project figcaption{padding:12px 14px; color:var(--muted)}
+
+.cert-nav{position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:999px; border:1px solid var(--line); background:rgba(0,0,0,.4); color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer}
+.cert-nav:hover{background:rgba(229,56,59,.28); border-color:var(--accent)}
+.cert-nav.prev{left:6px}
+.cert-nav.next{right:6px}
 
 /* Galleries / Thumbnails */
 .thumb-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:var(--space-4)}

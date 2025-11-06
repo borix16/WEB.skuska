@@ -75,5 +75,38 @@
   </footer>
   <script src="assets/js/animations.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function(){
+      var track = document.querySelector('.cert-track');
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.cert-slide'));
+      var prev = document.querySelector('.cert-nav.prev');
+      var next = document.querySelector('.cert-nav.next');
+      if(!track || !slides.length || !prev || !next) return;
+
+      var index = 0;
+
+      function update(){
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        prev.disabled = index === 0;
+        next.disabled = index === slides.length - 1;
+      }
+
+      prev.addEventListener('click', function(){
+        if(index > 0){ index--; update(); }
+      });
+      next.addEventListener('click', function(){
+        if(index < slides.length - 1){ index++; update(); }
+      });
+
+      // Klávesové šípky
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowLeft'){ prev.click(); }
+        if(e.key === 'ArrowRight'){ next.click(); }
+      });
+
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>
