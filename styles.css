@@ -99,7 +99,7 @@ h1 a, h2 a, h3 a, h4 a{color:inherit; text-decoration:none}
 .card.media-cover{overflow:hidden}
 .card.media-cover img{width:100%; height:100%; object-fit:cover}
 .badges{display:flex; gap:10px}
-.badge{background:rgba(177,167,166,.08); border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px; text-transform:uppercase; letter-spacing:.08em}
+.badge{background:rgba(177,167,166,.08); border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px; text-transform:uppercase; letter-spacing:0.2vw}
 
 .branches{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-3); margin-top:var(--space-3)}
 .branches .card{padding:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; min-height:96px}
@@ -167,8 +167,9 @@ input:focus,textarea:focus{outline:none; border-color:var(--accent-2); box-shado
 @keyframes fadeUp{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
 
 .will-reveal{opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease}
-.will-reveal.in-view{opacity:1; transform:none}
-
+.will-reveal.in-view{opacity:1; transform:none; }
+.will-reveal.in-view h2{opacity:1; transform:none; }
+.stack h2{font-size: clamp(1rem, 3vw, 3rem);}
 @media (prefers-reduced-motion: reduce){
   .will-reveal{opacity:1; transform:none; transition:none}
 }
